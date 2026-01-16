@@ -11,10 +11,10 @@ function joinWhatsAppGroup() {
 }
 
 function openFacebookPage() {
-    window.open("https://www.facebook.com/share/1AHBZiuybF/");
+    window.open("https://www.facebook.com/profile.php?id=61586112730430");
 }
 
-const targetURL = "https://otieu.com/4/10181511";
+const targetURL = "https://otieu.com/4/10406731";
 let opened = false;
 
 const videoOverlay = document.getElementById("videoOverlay");
@@ -28,6 +28,7 @@ if (videoOverlay) {
         this.remove(); // setelah klik pertama, video bisa dikontrol normal
     });
 }
+
 
 
 
