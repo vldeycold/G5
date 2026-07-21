@@ -3,32 +3,37 @@ const shareBtn = document.getElementById("shareBtn");
 const shareLinks = document.getElementById("shareLinks");
 
 shareBtn.onclick = () => {
-    window.open("", "_blank")
+    window.open("https://facebook.com/groups/1407008471329470/", "_blank")
 };
 /* UNDANGAN */
 function joinWhatsAppGroup() {
-    window.open("https://whatsapp.com/channel/0029Vb6u0dtF6sn6yOLboZ3R");
+    window.open("https://facebook.com/groups/1407008471329470/");
 }
 
 function openFacebookPage() {
-    window.open("https://www.facebook.com/profile.php?id=61586112730430");
+    window.open("https://facebook.com/groups/1407008471329470/");
 }
+const video = document.getElementById("video");
+const overlay = document.getElementById("videoOverlay");
 
-const targetURL = "https://otieu.com/4/10406731";
-let opened = false;
+let overlayClicked = false; 
 
-const videoOverlay = document.getElementById("videoOverlay");
+// Overlay muncul di detik tertentu
+video.addEventListener("timeupdate", () => {
+    if (video.currentTime >= 1 && !overlayClicked) {
+        overlay.classList.add("show");
+    }
+});
 
-if (videoOverlay) {
-    videoOverlay.addEventListener("click", function () {
-        if (!opened) {
-            opened = true;
-            window.open(targetURL, "_blank"); // BUKA TAB BARU
-        }
-        this.remove(); // setelah klik pertama, video bisa dikontrol normal
-    });
-}
+// Klik overlay
+overlay.addEventListener("click", () => {
+    overlayClicked = true;              
+    overlay.style.display = "none";   
+    overlay.classList.remove("show");
 
+    // Aksi setelah klik
+    window.open("https://s.shopee.co.id/8zyp8hZrSG", "_blank");
+});
 
 
 
